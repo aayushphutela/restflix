@@ -44,7 +44,10 @@ class Description extends StatelessWidget {
           Container(
               padding: EdgeInsets.only(left: 10),
               child:
-              modified_text(text: 'Releasing On - ' + launch_on, size: 14)),
+              modified_text(
+                  text: launch_on != null ? "Releasing On - " :"",
+              size: 14),
+          ),
           Row(
             children: [
               Container(
