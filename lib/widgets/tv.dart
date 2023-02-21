@@ -27,23 +27,23 @@ class TV extends StatelessWidget {
                   itemCount: tv.length,
                   itemBuilder: (context, index) {
                     return InkWell(onTap: (){
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => Description(
-                      //           name: tv[index]['original_name'],
-                      //           bannerurl:
-                      //           'https://image.tmdb.org/t/p/w500' +
-                      //               tv[index]['backdrop_path'],
-                      //           posterurl:
-                      //           'https://image.tmdb.org/t/p/w500' +
-                      //               tv[index]['poster_path'],
-                      //           description: tv[index]['overview'],
-                      //           vote: tv[index]['vote_average']
-                      //               .toString(),
-                      //           launch_on: tv[index]
-                      //           ['release_date'],
-                      //         )));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Description(
+                                name: tv[index]['original_name'],
+                                bannerurl:
+                                'https://image.tmdb.org/t/p/w500' +
+                                    tv[index]['backdrop_path'],
+                                posterurl:
+                                'https://image.tmdb.org/t/p/w500' +
+                                    tv[index]['poster_path'],
+                                description: tv[index]['overview'],
+                                vote: tv[index]['vote_average']
+                                    .toString(),
+                                launch_on: tv[index]
+                                ['release_date'],
+                              )));
                     },
                       child: Container(
                         padding: EdgeInsets.all(5),
